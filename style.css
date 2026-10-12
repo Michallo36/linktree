@@ -6,15 +6,24 @@ body, main, footer {
 }
 
 header {
-    margin-top: 100px;
+    margin-top: 0;
     position: relative;
     width: 95%;
+    box-sizing: border-box;
     padding: 10px; 
     border-radius: 60px;
-    height: 50px;   
+    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+footer {
+    box-sizing: border-box;
+    min-height: 70px;
+    width: 100%;
+    margin-top: 20px;   
+    text-align: center;
 }
 
 .header.text {
@@ -96,9 +105,18 @@ body {
     color: white;
     background-color: rgb(57, 54, 70);
     margin: 0;
-    height: 100vh;
-    justify-content: center;
+    box-sizing: border-box;
+    padding: 10px 0;
+    /*min-height: 100vh;*/
+    min-height: 120dvh;
+    justify-content: flex-start;
     gap: 10px;
+
+    > header,
+    > main,
+    > footer {
+        flex-shrink: 0;
+    }
 
     main {
         width:95%;
@@ -136,7 +154,7 @@ body {
         }
 
         .tile {
-            width: 100%;
+            width: 99.5%;
             height: 50px;
             background-color: rgb(185, 180, 199);
             border-radius: 15px;
